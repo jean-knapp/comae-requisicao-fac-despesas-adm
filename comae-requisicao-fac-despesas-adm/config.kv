@@ -1,0 +1,138 @@
+﻿DespesasAdministrativas
+{
+	Title "Requisição FAC para custeio de Despesas Administrativas"
+	WelcomeMessage "Bem-vindo ao Sistema de Solicitação de Despesas Administrativas da FAC."
+
+    Operations {
+        "0" "Ágata Amazônia"
+        "1" "Ágata Oeste"
+        "2" "Catrimani II"
+        "3" "Pantanal II"
+    }
+
+	Requester {
+        Option {
+            Name "UGR Requisitante"
+            FieldType "Selectable"
+            Preview "1"
+            Descrption ""
+            Items {
+                "0" "COMAE"
+            }
+        }
+        Option {
+            Name "Posto/Graduação"
+            FieldType "Selectable"
+            Preview "1"
+            Descrption ""
+            Items {
+                "0" "1T"
+                "1" "2T"
+                "2" "CP"
+                "3" "MJ"
+                "4" "TC"
+                "5" "CL"
+            }
+        }
+        Option {
+            Name "Nome de Guerra"
+            FieldType "RequiredText"
+            Preview "1"
+            Descrption ""
+        }
+        Option {
+            Name "Função na Operação"
+            FieldType "Selectable"
+            Preview "1"
+            Descrption ""
+            Items {
+                "0" "A-10"
+            }
+        }
+        Option {
+            Name "Telefone"
+            FieldType "Phone"
+            Preview "0"
+            Descrption ""
+        }
+        Option {
+            Name "E-mail"
+            FieldType "RequiredText"
+            Preview "0"
+            Descrption ""
+        }
+	}
+
+    RequestItem {
+        Option {
+            Name "Tipo de Solicitação"
+            FieldType "Selectable"
+            Preview "1"
+            Description ""
+            Items {
+                "0" "Descentralização"
+                "1" "Recolhimento"
+            }
+        }
+        Option {
+            Name "Natureza de Despesa"
+            FieldType "Selectable"
+            Preview "1"
+            Description ""
+            Items {
+                "0" "Diárias militares"
+                "1" "Passagem"
+                "2" "Material de consumo"
+                "3" "Material Permanente"
+                "4" "Serviços de Terceiros"
+            }
+        }
+        Option {
+            Name "Moeda"
+            FieldType "Selectable"
+            Preview "1"
+            Description ""
+            Items {
+                "0" "Real"
+                "1" "Dólar americano"
+                "2" "Peso"
+            }
+        }
+        Option {
+            Name "Valor"
+            FieldType "Currency"
+            Preview "1"
+            Description "Informar o valor total calculado de demanda de descentralização ou de recolhimento."
+        }
+        Option {
+            Name "Memória de Cálculo"
+            FieldType "RequiredText"
+            Preview "0"
+            Description ""
+        }
+        Option {
+            Name "UG EXEC"
+            FieldType "Selectable"
+            Preview "1"
+            Description "Atenção!\nNesse campo deve ser informada a UG EXEC apoiadora e não a requisitante, conforme objeto de custeio."
+            Items {
+                "0" "COMAE"
+            }
+        }
+        Option {
+            Name "Confirmação de Despesa Administrativa"
+            FieldType "Selectable"
+            Preview "0"
+            Description "Não deve ser solicitado o custeio de demandas de cunho logístico, tais como:\n* Suprimentos, combustíveis e lubrificantes de Aviação; e\nManutenções programadas que compõem o custo logístico da hora de voo."
+            Items {
+                "0" "Sim"
+            }
+        }
+        Option {
+            Name "Observações adicionais"
+            FieldType "FreeText"
+            Preview "0"
+            Description "Campo facultativo."
+        }
+	}
+}
